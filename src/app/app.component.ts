@@ -8,7 +8,6 @@ import { DataService } from './core/data.service';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent implements OnInit {
-  public title = 'Covid19 Statistics App';
   public data: any = undefined;
 
   constructor(private loggerService: LoggerService, private covidDataService: DataService) {}

@@ -1,18 +1,19 @@
-# AngularModuleWorkshop
+# Angular Module Workshop
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 10.0.2.
 
 This workshop is meant to make you more familiar with Angular Modules and best practices. 
-For more info see the PDF slides in this repo.
+We will not work with a boring 'Todo' list app, but with a more recent topic: we'll be making a Covid19 statistics 'Dashboarding' app making use of https://covid19api.com/.
+For more info on Angular Modules see the PDF slides in this repo.
 
 This workshop consists of the following exercises:
-1: get the app to run (fix 5 module/DI related problems)
-2: add a detail view component/module
-3: optimize the app:
-    a: make the app 'tree-shakeable'
-    b: make the detail view 'lazy-loadable'
+1. get the app to run (fix 5 module/DI related problems)
+2. add a detail view component/module
+3. optimize the app:
+    * make the app 'tree-shakeable'
+    * make the detail view 'lazy-loadable'
 
-*for each part you can check out a separate branch with a corresponding starting point, or you can continue with your own branch.
-
+*For each part you can check out a separate branch with a corresponding starting point, or you can continue with your own branch.*
+*The master branch contains the finished app*
 
 ## Development server
 
