@@ -16,8 +16,8 @@ export class OverviewComponent implements OnInit {
 
   ngOnInit(): void {
     this.dataService.getSummary().subscribe((data) => {
+      data.Countries = data.Countries.sort((a, b) => parseInt(b.NewConfirmed)-parseInt(a.NewConfirmed));
       this.data = data;
-      console.log(data);
     })
   }
 

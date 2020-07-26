@@ -1,5 +1,10 @@
+@import '~@angular/material/theming';
+$primary: mat-palette($mat-indigo);
+
 footer {
-    background-color: #ddd;
-    border-top: 1px solid #bbb;
+    padding: 1rem 0;
+    background-color: mat-color($primary);
+    color: white;
     text-align: center;
+    height: 2rem;
 }

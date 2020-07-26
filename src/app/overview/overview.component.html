@@ -1,17 +1,23 @@
 <mat-list>
     <mat-list-item>
-      <mat-icon matListIcon>language</mat-icon>
-      <h3 matLine> World </h3>
-      <p matLine>
-        <span> New confirmed: </span>
-        <span>{{ data?.Global?.NewConfirmed }}</span>
-      </p>
+        <!-- <mat-icon matListIcon>language</mat-icon> -->
+        <h3 matLine> World </h3>
+        <p matLine>
+            <span> New confirmed: </span>
+            <span>{{ data?.Global?.NewConfirmed }}</span>
+        </p>
     </mat-list-item>
+
+    <mat-divider></mat-divider>
+
     <mat-list-item *ngFor="let country of data?.Countries">
-      <h3 matLine>{{ country.Slug }}</h3>
-      <p matLine>
-        <span> New confirmed: </span>
-        <span>{{ country.NewConfirmed }}</span>
-      </p>
+        <!-- <mat-icon matListIcon>outlined_flag</mat-icon> -->
+
+        <h3 matLine>{{ country.Slug | titlecase }}</h3>
+        <p matLine>
+            <span> New confirmed: </span>
+            <span>{{ country.NewConfirmed }}</span>
+        </p>
+        <mat-divider *ngIf="!last"></mat-divider>
    </mat-list-item>
 </mat-list>

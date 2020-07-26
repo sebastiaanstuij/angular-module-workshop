@@ -2,13 +2,13 @@ import { Country } from './country.model';
 
 export interface Summary {
    Global: {
-    NewConfirmed: String;
-    TotalConfirmed: String;
-    NewDeaths: String;
-    TotalDeaths: String;
-    NewRecovered: String;
-    TotalRecovered: String;
+    NewConfirmed: string;
+    TotalConfirmed: string;
+    NewDeaths: string;
+    TotalDeaths: string;
+    NewRecovered: string;
+    TotalRecovered: string;
    };
    Countries: [Country];
-   Date: String;
+   Date: string;
 }
