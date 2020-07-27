@@ -18,6 +18,7 @@ import { FooterComponent } from './footer/footer.component';
 import { CountryDataService } from './country-data.service';
 import { SummaryDataService } from './summary-data.service';
 import { MapDataService } from './map-data.service';
+import { LoggerService } from './logger.service';
 
 @NgModule({
   declarations: [
@@ -36,7 +37,7 @@ import { MapDataService } from './map-data.service';
     MatToolbarModule,
     OverviewModule 
   ],
-  providers: [CountryDataService, SummaryDataService, MapDataService],
+  providers: [CountryDataService, SummaryDataService, LoggerService, MapDataService],
   bootstrap: []
 })
 export class AppModule { }
