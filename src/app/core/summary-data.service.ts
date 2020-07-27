@@ -7,9 +7,7 @@ import { map } from 'rxjs/operators';
 import { WorldSummary } from '../shared/models/world-summary.model';
 import { LoggerService } from './logger.service';
 
-@Injectable({
-  providedIn: 'root'
-})
+@Injectable()
 export class SummaryDataService {
 
   constructor(private http: HttpClient, private loggerService: LoggerService) { 

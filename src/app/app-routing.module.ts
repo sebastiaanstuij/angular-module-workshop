@@ -8,10 +8,10 @@ const routes: Routes = [
     path: 'overview',
     component: OverviewComponent
   },
-  {
-    path: 'country-view/:country',
-    loadChildren: () => import('./country-view/country-view.module').then(m => m.CountryViewModule)
-  },
+  // {
+  //   path: 'country-view/:country',
+  //   component: YourCountryComponent
+  // },
   { 
     path: '**',
     redirectTo: '/overview', 
