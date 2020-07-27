@@ -22,4 +22,5 @@ This workshop consists of the following exercises:
     * After making the app 'lazy-loadable' check your browsers developer tools network tab to see what happens when loading the app and when visiting a lazy route. Also have a look at when the country-data service is loaded.
     * Finally enable the Ivy renderer for some final optimization (https://angular.io/guide/ivy)
 5. bonus:
+    * create a better header/(sticky)footer and better navigation (I had no time for this :P)
     * create a graph on the detail page visualizing the data using something like https://www.chartjs.org/ or (more complex) https://d3js.org/
