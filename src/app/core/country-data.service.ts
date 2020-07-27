@@ -13,7 +13,7 @@ import { map } from 'rxjs/operators';
 export class CountryDataService {
 
   constructor(private http: HttpClient, private loggerService: LoggerService) { 
-    this.loggerService.log('DataService loaded');
+    this.loggerService.log('CountryDataService loaded');
   }
   
   public getTotalAllStatus(country: string): Observable<CountryTotalAll[]> {

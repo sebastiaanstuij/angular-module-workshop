@@ -13,7 +13,7 @@ import { LoggerService } from './logger.service';
 export class SummaryDataService {
 
   constructor(private http: HttpClient, private loggerService: LoggerService) { 
-    this.loggerService.log('DataService loaded');
+    this.loggerService.log('SummaryDataService loaded');
   }
   
   public getSummary(): Observable<WorldSummary> {
