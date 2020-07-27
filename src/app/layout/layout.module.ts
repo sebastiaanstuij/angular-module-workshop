@@ -20,8 +20,4 @@ import { FooterComponent } from './footer/footer.component';
     HeaderComponent
   ]
 })
-export class LayoutModule { 
-  constructor() {
-    console.log('LayoutModule loaded');
- }
-}
+export class LayoutModule { }

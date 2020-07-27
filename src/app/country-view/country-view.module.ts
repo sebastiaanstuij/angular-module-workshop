@@ -1,21 +1,22 @@
 import { NgModule } from '@angular/core';
 
 import { SharedModule } from '../shared/shared.module';
-import { CountryviewComponent } from './countryview.component';
+import { CountryViewComponent } from './country-view.component';
+import { LoggerService } from '../core/logger.service';
 
 
 @NgModule({
-  declarations: [CountryviewComponent],
+  declarations: [CountryViewComponent],
   imports: [
     SharedModule
   ],
   exports: [
-    CountryviewComponent
+    CountryViewComponent
   ]
   
 })
 export class CountryViewModule { 
-  constructor() {
-    console.log('CountryViewModule loaded');
+  constructor(loggerService: LoggerService) {
+    loggerService.log('CountryViewModule loaded');
  }
 }

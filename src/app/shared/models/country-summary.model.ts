@@ -1,4 +1,4 @@
-export interface Country {
+export interface CountrySummary {
     Country: string;
     CountryCode: string;
     Slug: string;

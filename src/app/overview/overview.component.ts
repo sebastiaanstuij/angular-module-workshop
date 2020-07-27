@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
-import { LoggerService } from '../core/logger.service';
-import { DataService } from '../core/data.service';
+import { SummaryDataService } from '../core/summary-data.service';
+import { WorldSummary } from '../shared/models/world-summary.model';
 
 @Component({
   selector: 'app-overview',
@@ -10,12 +10,12 @@ import { DataService } from '../core/data.service';
 })
 export class OverviewComponent implements OnInit {
 
-  public data: any = undefined;
+  public data: WorldSummary = undefined;
 
-  constructor(private loggerService: LoggerService, private dataService: DataService) {}
+  constructor(private summaryDataService: SummaryDataService) {}
 
   ngOnInit(): void {
-    this.dataService.getSummary().subscribe((data) => {
+    this.summaryDataService.getSummary().subscribe((data) => {
       data.Countries = data.Countries.sort((a, b) => parseInt(b.NewConfirmed)-parseInt(a.NewConfirmed));
       this.data = data;
     })

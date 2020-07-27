@@ -1,6 +1,6 @@
-import { Country } from './country.model';
+import { CountrySummary } from './country-summary.model';
 
-export interface Summary {
+export interface WorldSummary {
    Global: {
     NewConfirmed: string;
     TotalConfirmed: string;
@@ -9,6 +9,6 @@ export interface Summary {
     NewRecovered: string;
     TotalRecovered: string;
    };
-   Countries: [Country];
+   Countries: [CountrySummary];
    Date: string;
 }

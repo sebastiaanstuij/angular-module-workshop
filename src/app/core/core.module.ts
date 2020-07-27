@@ -30,8 +30,4 @@ see https://github.com/angular/angular/issues/17825 for an interesting discussio
     // advice: leave empty, instead use provideIn property of service
   ]
 })
-export class CoreModule {
-  constructor() {
-    console.log('CountryViewModule loaded');
-  }
-}
+export class CoreModule { }
