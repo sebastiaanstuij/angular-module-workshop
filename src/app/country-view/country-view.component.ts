@@ -1,8 +1,10 @@
 import { Component, OnInit } from '@angular/core';
+
+import { Observable } from 'rxjs';
+
 import { CountryDataService } from '../core/country-data.service';
 import { CountryTotalAll } from '../shared/models/country-total-all.model';
 import { ActivatedRoute, Params } from '@angular/router';
-import { map } from 'rxjs/operators';
 
 @Component({
   selector: 'app-countryview',
@@ -11,7 +13,7 @@ import { map } from 'rxjs/operators';
 })
 export class CountryViewComponent implements OnInit {
 
-  public data: CountryTotalAll[] = undefined;
+  public data: Observable<CountryTotalAll[]>;
   public country: string = undefined;
 
   constructor(
@@ -24,9 +26,7 @@ export class CountryViewComponent implements OnInit {
       this.country = params.country;
     });
 
-    this.countryDataService.getTotalAllStatus(this.country).subscribe((data) => {
-      this.data = data;
-    })
+    this.data = this.countryDataService.getTotalAllStatus(this.country);
   }
 
 }

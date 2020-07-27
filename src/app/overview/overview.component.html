@@ -1,32 +1,38 @@
-<mat-list>
-    <mat-list-item>
-        <h3 matLine> World </h3>
-        <p matLine>
-            <span> New confirmed: </span>
-            <span>{{ data?.Global?.NewConfirmed }}</span>
-        </p>
-        <p matLine>
-            <span> New deaths: </span>
-            <span>{{ data?.Global?.NewDeaths }}</span>
-        </p>
-    </mat-list-item>
+<div *ngIf="data | async as overviewData; else loading">
+    <mat-list>
+        <mat-list-item>
+            <h3 matLine> World </h3>
+            <p matLine>
+                <span> New confirmed: </span>
+                <span>{{ overviewData.Global.NewConfirmed }}</span>
+            </p>
+            <p matLine>
+                <span> New deaths: </span>
+                <span>{{ overviewData.Global.NewDeaths }}</span>
+            </p>
+        </mat-list-item>
 
-    <mat-divider></mat-divider>
+        <mat-divider></mat-divider>
 
-    <mat-list-item *ngFor="let country of data?.Countries">
-        <h3 matLine>{{ country.Slug | titlecase }}</h3>
+        <mat-list-item *ngFor="let country of overviewData.Countries">
+            <h3 matLine>{{ country.Slug | titlecase }}</h3>
 
-        <p matLine>
-            <span> New confirmed: </span>
-            <span>{{ country.NewConfirmed }}</span>
-        </p>
-        <p matLine>
-            <span> New deaths: </span>
-            <span>{{ country.NewDeaths }}</span>
-        </p>
-        <p matLine>
-            <a href='/country-view/{{country.Slug}}'>Details</a>
-        </p>
-        <mat-divider *ngIf="!last"></mat-divider>
-   </mat-list-item>
-</mat-list>
+            <p matLine>
+                <span> New confirmed: </span>
+                <span>{{ country.NewConfirmed }}</span>
+            </p>
+            <p matLine>
+                <span> New deaths: </span>
+                <span>{{ country.NewDeaths }}</span>
+            </p>
+            <p matLine>
+                <a href='/country-view/{{country.Slug}}'>Details</a>
+            </p>
+            <mat-divider *ngIf="!last"></mat-divider>
+        </mat-list-item>
+    </mat-list>
+</div>
+
+<ng-template #loading>
+    <div>Loading ...</div>
+</ng-template>    

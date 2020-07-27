@@ -1,21 +1,28 @@
-<h1 matLine>{{ data[0]?.Country | titlecase }}</h1>
-<mat-divider></mat-divider>
 
-<mat-list>
-    <mat-list-item *ngFor="let item of data">
-        <h3 matLine>{{ item.Date | date }}</h3>
-        <p matLine>
-            <span> New confirmed: </span>
-            <span>{{ item.Confirmed }}</span>
-        </p>
-        <p matLine>
-            <span> New deaths: </span>
-            <span>{{ item.Deaths }}</span>
-        </p>
-        <p matLine>
-            <span> Recovered: </span>
-            <span>{{ item.Recovered }}</span>
-        </p>
-        <mat-divider *ngIf="!last"></mat-divider>
-   </mat-list-item>
-</mat-list>
+<div *ngIf="data | async as countryData; else loading">
+    <h1 matLine>{{ countryData[0].Country | titlecase }}</h1>
+    <mat-divider></mat-divider>
+
+    <mat-list>
+        <mat-list-item *ngFor="let item of countryData">
+            <h3 matLine>{{ item.Date | date }}</h3>
+            <p matLine>
+                <span> New confirmed: </span>
+                <span>{{ item.Confirmed }}</span>
+            </p>
+            <p matLine>
+                <span> New deaths: </span>
+                <span>{{ item.Deaths }}</span>
+            </p>
+            <p matLine>
+                <span> Recovered: </span>
+                <span>{{ item.Recovered }}</span>
+            </p>
+            <mat-divider *ngIf="!last"></mat-divider>
+    </mat-list-item>
+    </mat-list>
+</div>
+
+<ng-template #loading>
+    <div>Loading ...</div>
+</ng-template>    
