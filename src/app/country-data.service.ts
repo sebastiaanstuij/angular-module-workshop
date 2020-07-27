@@ -3,13 +3,11 @@ import { HttpClient } from '@angular/common/http';
 
 import { Observable } from 'rxjs';
 import { LoggerService } from './logger.service';
-import { CountryTotalAll } from '../shared/models/country-total-all.model';
+import { CountryTotalAll } from './models/country-total-all.model';
 import { map } from 'rxjs/operators';
 
 
-@Injectable({
-  providedIn: 'root'
-})
+@Injectable()
 export class CountryDataService {
 
   constructor(private http: HttpClient, private loggerService: LoggerService) { 

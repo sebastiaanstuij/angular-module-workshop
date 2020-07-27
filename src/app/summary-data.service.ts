@@ -4,12 +4,10 @@ import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { map } from 'rxjs/operators';
 
-import { WorldSummary } from '../shared/models/world-summary.model';
+import { WorldSummary } from './models/world-summary.model';
 import { LoggerService } from './logger.service';
 
-@Injectable({
-  providedIn: 'root'
-})
+@Injectable()
 export class SummaryDataService {
 
   constructor(private http: HttpClient, private loggerService: LoggerService) { 

@@ -1,19 +1,42 @@
 import { NgModule } from '@angular/core';
+import { BrowserModule } from '@angular/platform-browser';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { HttpClientModule } from '@angular/common/http';
+import { CommonModule } from '@angular/common';
+
+import { MatCardModule } from '@angular/material/card';
+import { MatIconModule } from '@angular/material/icon';
+import { MatListModule } from '@angular/material/list';
+import { MatButtonModule } from '@angular/material/button';
+import { MatToolbarModule } from '@angular/material/toolbar';
 
 import { AppComponent } from './app.component';
 import { OverviewModule } from './overview/overview.module';
-import { CountryViewModule } from './country-view/country-view.module';
-import { CoreModule } from './core/core.module';
+import { AppRoutingModule } from './app-routing.module';
+import { HeaderComponent } from './header/header.component';
+import { FooterComponent } from './footer/footer.component';
+import { CountryDataService } from './country-data.service';
+import { SummaryDataService } from './summary-data.service';
+import { MapDataService } from './map-data.service';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent, HeaderComponent, FooterComponent
   ],
   imports: [
-    CoreModule,
+    AppRoutingModule,
+    BrowserModule,
+    BrowserAnimationsModule,
+    HttpClientModule,
+    CommonModule,
+    MatCardModule,
+    MatIconModule,
+    MatListModule,
+    MatButtonModule,
+    MatToolbarModule,
     OverviewModule 
   ],
-  providers: [],
+  providers: [CountryDataService, SummaryDataService, MapDataService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

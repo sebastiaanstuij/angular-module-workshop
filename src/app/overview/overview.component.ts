@@ -1,8 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 
-import { SummaryDataService } from '../core/summary-data.service';
-import { WorldSummary } from '../shared/models/world-summary.model';
 import { Observable } from 'rxjs';
+
+import { SummaryDataService } from '../summary-data.service';
+import { WorldSummary } from '../models/world-summary.model';
 
 @Component({
   selector: 'app-overview',
