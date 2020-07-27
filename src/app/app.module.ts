@@ -37,6 +37,6 @@ import { MapDataService } from './map-data.service';
     OverviewModule 
   ],
   providers: [CountryDataService, SummaryDataService, MapDataService],
-  bootstrap: [AppComponent]
+  bootstrap: []
 })
 export class AppModule { }

@@ -5,11 +5,11 @@ We will not work with a boring 'Todo' list app, but with a more relevant topic: 
 For more info on Angular Modules see the PDF slides in this repo.
 
 *For each part of the workshop you can check out a separate branch with a corresponding starting point, or you can continue with your own branch.*
-*The master branch contains the finished app*
+*The master branch contains the finished app (up to assignment 4)*
 *General advice: make use of the Angular CLI https://angular.io/cli/generate*
 
 This workshop consists of the following exercises:
-1. get the app to run (fix X module/DI related problems)
+1. get the app to run (fix 5 module related problems)
 2. improve the structure of the app (tip: https://angular.io/guide/styleguide#overall-structural-guidelines):
     * refactor the shared module (which modules will be shared accross different feature modules, also see assignment 3) and place it in it's own directory with other relevant files
     * add a core directory and module (for now) which houses the 'core' services
