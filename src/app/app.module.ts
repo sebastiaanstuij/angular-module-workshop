@@ -2,7 +2,6 @@ import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
 import { OverviewModule } from './overview/overview.module';
-import { CountryViewModule } from './country-view/country-view.module';
 import { CoreModule } from './core/core.module';
 
 @NgModule({
