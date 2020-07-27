@@ -11,7 +11,6 @@ import { CoreModule } from './core/core.module';
   ],
   imports: [
     CoreModule,
-    CountryViewModule,
     OverviewModule 
   ],
   providers: [],
