@@ -7,9 +7,7 @@ import { CountryTotalAll } from '../shared/models/country-total-all.model';
 import { map } from 'rxjs/operators';
 
 
-@Injectable({
-  providedIn: 'root'
-})
+@Injectable()
 export class CountryDataService {
 
   constructor(private http: HttpClient, private loggerService: LoggerService) { 

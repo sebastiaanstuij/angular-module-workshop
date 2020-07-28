@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
 import { OverviewComponent } from './overview/overview.component';
+import { CountryViewComponent } from './country-view/country-view.component';
 
 const routes: Routes = [
   {
@@ -10,7 +11,7 @@ const routes: Routes = [
   },
   {
     path: 'country-view/:country',
-    loadChildren: () => import('./country-view/country-view.module').then(m => m.CountryViewModule)
+    component: CountryViewComponent
   },
   { 
     path: '**',

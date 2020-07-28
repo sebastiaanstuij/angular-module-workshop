@@ -5,9 +5,7 @@ import * as moment from 'moment';
 
 import { LoggerService } from './logger.service';
 
-@Injectable({
- providedIn: 'root'
-})
+@Injectable()
 export class MapDataService {
 
   constructor(private loggerService: LoggerService) { 
