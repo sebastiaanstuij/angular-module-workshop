@@ -14,7 +14,7 @@ This workshop consists of the following exercises:
     * refactor the shared module (which modules will be shared accross different feature modules, also see assignment 3) and place it in it's own directory with other relevant files
     * add a core directory and module (for now) which houses the 'core' services
     * add a layout module which houses the header and footer
-    * refactor the appmodule so that it hardly contains any modules (directly, besides what's needed), just an appComponent and a bootstrap property
+    * refactor the appmodule so that it hardly contains any modules (directly, besides what's needed), providers(for now), just an appComponent and a bootstrap property
 3. add a detail view component & module in which we can display data for an individual country (the service and routing has already been created)
 4. optimize the app:
     * make the app 'tree-shakeable' (tip: see what happens to the bundle size before and after this step (use 'ng build --prod=true'))
